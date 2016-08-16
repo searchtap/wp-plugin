@@ -11,7 +11,7 @@ class Main {
 
     public function tab_menu() {
 
-        add_menu_page('Tabs', 'Tabs', 'manage_options', 'tabs.php', array($this, 'tab_html'));
+        add_menu_page('Tabs', 'SearchTap', 'manage_options', 'tabs.php', array($this, 'tab_html'));
     }
 
     public function tab_html() {
