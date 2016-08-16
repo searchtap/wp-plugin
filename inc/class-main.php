@@ -1,5 +1,7 @@
 <?php
 
+register_uninstall_hook(__FILE__, array('Main', 'searchtap_uninstall'));
+
 class Main {
 
     function __construct() {
@@ -7,6 +9,20 @@ class Main {
         add_action('admin_menu', array($this, 'tab_menu'));
         add_action('wp_ajax_my_action_template_one', array($this, 'TemplateData'));
         add_action('wp_ajax_my_action_template_two', array($this, 'TemplateData'));
+    }
+
+    public function searchtap_uninstall() {
+        if (!current_user_can('activate_plugins'))
+            return;
+        check_admin_referer('bulk-plugins');
+
+        // Important: Check if the file is the one
+        // that was registered during the uninstall hook.
+        if (__FILE__ != WP_UNINSTALL_PLUGIN)
+            return;
+
+        # Uncomment the following line to see the function in action
+        # exit( var_dump( $_GET ) );
     }
 
     public function tab_menu() {

@@ -40,8 +40,8 @@ class tab_template {
         wp_register_script('jquery-1.12.4.js', "https://code.jquery.com/jquery-1.12.4.js");
         wp_register_script('jquery-ui.js', "https://code.jquery.com/ui/1.12.0/jquery-ui.js");
         wp_register_script('bootstrap.min.js', "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js");
-        wp_register_script('custom.js', plugins_url() . "/tabs/inc/templates/js/custom.js");
-        wp_register_style('tab.css', plugins_url() . "/tabs/inc/templates/css/tab.css");
+        wp_register_script('custom.js', plugin_dir_url(__FILE__)."js/custom.js");
+        wp_register_style('tab.css', plugin_dir_url(__FILE__)."css/tab.css");
         wp_register_style('bootstrap.min.css', "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
     }
 

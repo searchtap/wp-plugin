@@ -7,7 +7,7 @@
 /*
   Plugin Name: Search Tab
   Plugin URI: http://techmarbles.com
-  Description: Wordpress Tabs.
+  Description: SearchTap integration for wordpress.
   Author: Ankush
   Version: 1.6
   Author URI: http://techmarbles.com
@@ -16,12 +16,21 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-final class Tabs {
+final class SearchTap {
 
     protected static $_instance = null;
 
     function __construct() {
+        add_filter('plugin_action_links_' . plugin_basename(__FILE__), array($this, 'plugin_action_links'));
         $this->Includes();
+    }
+
+    public static function plugin_action_links($links) {
+        $action_links = array(
+            'settings' => '<a href="' . admin_url('admin.php?page=searchtap.php') . '" title="' . esc_attr(__('View WooCommerce Settings', 'woocommerce')) . '">' . __('Settings', 'woocommerce') . '</a>',
+        );
+
+        return array_merge($action_links, $links);
     }
 
     // Debugging function
@@ -37,9 +46,9 @@ final class Tabs {
         require_once ("inc/class-main.php"); // main.php
         if (class_exists('Main')) {
             $main_file = new Main;
-        } 
+        }
     }
-    
+
     public static function instance() {
         if (is_null(self::$_instance)) {
             self::$_instance = new self();
@@ -49,9 +58,9 @@ final class Tabs {
 
 }
 
-function TAB() {
-    return Tabs::instance();
+function SearchTap() {
+    return SearchTap::instance();
 }
 
 // Global for backwards compatibility.
-$GLOBALS['tabs'] = TAB();
+$GLOBALS['tabs'] = SearchTap();
