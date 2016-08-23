@@ -7,19 +7,49 @@ if (!defined('ABSPATH')) {
 ob_start();
 ?>
 
-<h1>FQA 1</h1>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<div id="side-sortables" class="accordion-container">
+    <ul class="outer-border">
+        <li class="control-section accordion-section  add-post-type-page open" id="add-post-type-page">
+            <h4 class="handle">
+                FQA 1         
+                <span class="screen-reader-text">Press return or enter to open this section</span>
+            </h4>  
+            <div class="accordion-section-content">
+                <div class="inside">
+                    <div id="posttype-page" class="posttypediv">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="control-section accordion-section  add-post-type-page open" id="add-post-type-page">
+            <h4 class=" handle" >
+                FQA 2                 <span class="screen-reader-text">Press return or enter to open this section</span>
 
-<h1>FQA 2</h1>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </h4>  
+            <div class="accordion-section-content " style="display: none;">
+                <div class="inside">
+                    <div id="posttype-page" class="posttypediv">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="control-section accordion-section  add-post-type-page open" id="add-post-type-page">
+            <h4 class=" handle">
+                FQA 3                <span class="screen-reader-text">Press return or enter to open this section</span>
 
-<h1>FQA 2</h1>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-
-
-
-
+             </h4>  
+            <div class="accordion-section-content" style="display: none;">
+                <div class="inside">
+                    <div id="posttype-page" class="posttypediv">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
 
 
 

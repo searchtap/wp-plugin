@@ -5,7 +5,6 @@ register_uninstall_hook(__FILE__, array('Main', 'searchtap_uninstall'));
 class Main {
 
     function __construct() {
-
         add_action('admin_menu', array($this, 'tab_menu'));
         add_action('wp_ajax_my_action_template_one', array($this, 'TemplateData'));
         add_action('wp_ajax_my_action_template_two', array($this, 'TemplateData'));
@@ -27,7 +26,7 @@ class Main {
 
     public function tab_menu() {
 
-        add_menu_page('Tabs', 'SearchTap', 'manage_options', 'tabs.php', array($this, 'tab_html'));
+        add_menu_page('Tabs', 'SearchTap', 'manage_options', 'searchtap.php', array($this, 'tab_html'), plugin_dir_url(__FILE__)."logo/logo.png");
     }
 
     public function tab_html() {

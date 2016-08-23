@@ -5,10 +5,10 @@
  * @version 1.6
  */
 /*
-  Plugin Name: Search Tab
+  Plugin Name: SearchTap WP Integration
   Plugin URI: http://techmarbles.com
   Description: SearchTap integration for wordpress.
-  Author: Ankush
+  Author: SearchTap
   Version: 1.6
   Author URI: http://techmarbles.com
  */

@@ -1,7 +1,15 @@
 jQuery(document).ready(function ($) {
     jQuery(function () {
         jQuery("#tabs").tabs();
+        jQuery('.handle').click(function () {
+            jQuery(this).next('.accordion-section-content').slideToggle();
+//            var str = "";
+//            document.styleSheets[0].addRule('h4.handle', 'content: "' + str + '";');
+        })
     });
+
+
+
 
     $("#form-tamplate_1").submit(function (event) {
         event.preventDefault();
@@ -45,8 +53,6 @@ jQuery(document).ready(function ($) {
                 "^(http:\/\/www.|https:\/\/www.|ftp:\/\/www.|www.){1}([0-9A-Za-z]+\.)");
         return urlregex.test(url);
     }
-
-
 });
 
 
