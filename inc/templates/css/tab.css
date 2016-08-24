@@ -29,6 +29,10 @@
     font-size: 100%;
     list-style: none;
 }
+.form{
+    margin-left: 5px;
+}
+
 .ui-helper-clearfix:before,
 .ui-helper-clearfix:after {
     content: "";

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 class tab_template {
 
     function __construct() {
@@ -22,20 +22,24 @@ class tab_template {
         <h1>
             SearchTap
         </h1>
-        <div id="tabs">
-            <ul>
+        <form name="tabTest" method="post" action="admin-post.php">  
+            <input type="hidden" name="action" value="export_data">
+           
+            <div id="tabs">
+                <ul>
+                    <?php
+                    foreach ($this->tab_name as $key => $template_name) {
+                        ?>
+                        <li><a  class="nav-tab" href="#tabs-<?php echo $key; ?>"><?php echo $template_name; ?></a></li>
+                    <?php } ?>  
+                </ul>
                 <?php foreach ($this->tab_name as $key => $template_name) { ?>
-                    <li><a class="nav-tab" href="#tabs-<?php echo $key; ?>"><?php echo $template_name; ?></a></li>
-                <?php } ?>  
-            </ul>
-
-            <?php foreach ($this->tab_name as $key => $template_name) { ?>
-                <div id="tabs-<?php echo $key; ?>">
-                    <?php include_once ('tab_template_' . $key . '.php'); ?>
-                </div>
-            <?php } ?>   
-        </div>
-
+                    <div id="tabs-<?php echo $key; ?>">
+                        <?php include_once ('tab_template_' . $key . '.php'); ?>
+                    </div>
+                <?php } ?>   
+            </div>
+        </form>
         <?php
         echo ob_get_clean();
     }

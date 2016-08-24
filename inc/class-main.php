@@ -1,13 +1,16 @@
 <?php
-
 register_uninstall_hook(__FILE__, array('Main', 'searchtap_uninstall'));
 
 class Main {
 
     function __construct() {
         add_action('admin_menu', array($this, 'tab_menu'));
-        add_action('wp_ajax_my_action_template_one', array($this, 'TemplateData'));
-        add_action('wp_ajax_my_action_template_two', array($this, 'TemplateData'));
+        add_action('admin_post_export_data', array($this, 'form_submit_export'));
+
+        // SETTING ADMIN NOTICE FOR SETTINGS UPDATE
+        if (isset($_GET['option'])) {
+            add_action('admin_notices', array($this, 'searchtap_custom_admin_notice'));
+        }
     }
 
     public function searchtap_uninstall() {
@@ -24,9 +27,17 @@ class Main {
         # exit( var_dump( $_GET ) );
     }
 
-    public function tab_menu() {
+    public function form_submit_export() {
+        $options = $_POST;
+        unset($options['action']);
+        $this->AddOptions($options);
+        $url = $_SERVER['HTTP_REFERER'];
+        wp_safe_redirect($url . '&option=update');
+        exit;
+    }
 
-        add_menu_page('Tabs', 'SearchTap', 'manage_options', 'searchtap.php', array($this, 'tab_html'), plugin_dir_url(__FILE__)."logo/logo.png");
+    public function tab_menu() {
+        add_menu_page('Tabs', 'SearchTap', 'manage_options', 'searchtap.php', array($this, 'tab_html'), plugin_dir_url(__FILE__) . "logo/logo.png");
     }
 
     public function tab_html() {
@@ -36,35 +47,20 @@ class Main {
         }
     }
 
-    public function TemplateData() {
-        global $wpdb;
-        $action = $_POST['action'];
-        switch ($action) {
-            case "my_action_template_one":
-                $template_1_data = array();
-                parse_str($_POST['template_1'], $template_1_data);
-                $this->AddOptions($template_1_data);
-                echo "Successfully added";
-                break;
-            case "my_action_template_two":
-                $template_2_data = array();
-                parse_str($_POST['template_2'], $template_2_data);
-                $this->AddOptions($template_2_data);
-                echo "Successfully added";
-                break;
-            default:
-                echo "Error";
-                break;
-        }
-
-        wp_die();
-    }
-
     public function AddOptions($template_data) {
         foreach ($template_data as $key => $data) {
             delete_option($key);
             add_option($key, $data, "", "yes");
         }
+    }
+
+    public function searchtap_custom_admin_notice() {
+        ?>
+        <div class="notice notice-success is-dismissible"> 
+            <p><strong>Settings saved.</strong></p>
+        </div>
+
+        <?php
     }
 
 }

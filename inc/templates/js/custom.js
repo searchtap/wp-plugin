@@ -1,67 +1,49 @@
 jQuery(document).ready(function ($) {
-    var style = '\f142';
     jQuery(function () {
         jQuery("#tabs").tabs();
         jQuery('.handle').click(function () {
             jQuery(this).next('.accordion-section-content').slideToggle();
             var arrow = jQuery(this).find('span');
             if (arrow.hasClass("arrow-down")) {
-                arrow.removeClass("arrow-down");
-                arrow.addClass("arrow-up");
-            } else if (arrow.hasClass("arrow-up")) {
-                arrow.removeClass("arrow-up");
-                arrow.addClass("arrow-down");
+                jQuery(this).find('span').removeClass("arrow-down");
+                jQuery(this).find('span').addClass("arrow-up");
+            } else if (jQuery(this).find('span').hasClass("arrow-up")) {
+                jQuery(this).find('span').removeClass("arrow-up");
+                jQuery(this).find('span').addClass("arrow-down");
             }
+
         })
-    });
- 
- 
 
 
-    $("#form-tamplate_1").submit(function (event) {
-        event.preventDefault();
-        var url_valid = validateForm();
-        if (url_valid == true) {
-            var data = jQuery(this).serialize();
-            var data = {
-                'action': 'my_action_template_one',
-                'template_1': data
-            };
+//FOR ERMANING THE SAME TAB OPEN AFTER RELOAD
+        jQuery(function ($) {
+            var index = 'qpsstats-active-tab';
+            //  Define friendly data store name
+            var dataStore = window.sessionStorage;
+            var oldIndex = 0;
+            //  Start magic!
+            try {
+                // getter: Fetch previous value
+                oldIndex = dataStore.getItem(index);
+            } catch (e) {
+            }
 
-            // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
-            jQuery.post(ajaxurl, data, function (response) {
-                alert(response);
-                return false;
+            jQuery("#tabs").tabs({
+                active: oldIndex,
+                activate: function (event, ui) {
+                    //  Get future value
+                    var newIndex = ui.newTab.parent().children().index(ui.newTab);
+                    //  Set future value
+                    try {
+                        dataStore.setItem(index, newIndex);
+                    } catch (e) {
+                    }
+                }
             });
-        } else {
-            alert("URL not valid");
-            return false;
-        }
-
-    });
-    $("#form-tamplate_2").submit(function (event) {
-        event.preventDefault();
-        var data = jQuery(this).serialize();
-        var data = {
-            'action': 'my_action_template_two',
-            'template_2': data
-        };
-
-        // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
-        jQuery.post(ajaxurl, data, function (response) {
-            alert(response);
         });
     });
 
-
-    function validateForm() {
-        var url = jQuery('#siteurl').val();
-        var urlregex = new RegExp(
-                "^(http:\/\/www.|https:\/\/www.|ftp:\/\/www.|www.){1}([0-9A-Za-z]+\.)");
-        return urlregex.test(url);
-    }
 });
-
 
 
 
