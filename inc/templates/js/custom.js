@@ -14,8 +14,8 @@ jQuery(document).ready(function ($) {
             }
         })
     });
-
-
+ 
+ 
 
 
     $("#form-tamplate_1").submit(function (event) {
