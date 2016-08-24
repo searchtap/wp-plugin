@@ -2,7 +2,7 @@
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
-ob_start();
+ob_start(); 
 ?>
 
 <div id="side-sortables" class="accordion-container">

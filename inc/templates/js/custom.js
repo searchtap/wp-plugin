@@ -12,7 +12,6 @@ jQuery(document).ready(function ($) {
                 arrow.removeClass("arrow-up");
                 arrow.addClass("arrow-down");
             }
-
         })
     });
 
