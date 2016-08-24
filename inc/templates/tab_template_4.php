@@ -9,7 +9,7 @@ ob_start();
     <ul class="outer-border">
         <li class="control-section accordion-section  add-post-type-page open" id="add-post-type-page">
             <h4 class="handle">
-                FQA 1         
+                FAQ 1         
                 <span id="arrow" class="arrow-down"></span>  
             </h4>  
             <div class="accordion-section-content " style="display: none;">
@@ -22,7 +22,7 @@ ob_start();
         </li>
         <li class="control-section accordion-section  add-post-type-page open" id="add-post-type-page">
             <h4 class=" handle" >
-                FQA 2              
+                FAQ 2              
                       <span id="arrow" class="arrow-down"></span>  
             </h4>  
             <div class="accordion-section-content " style="display: none;">
@@ -35,7 +35,7 @@ ob_start();
         </li>
         <li class="control-section accordion-section  add-post-type-page open" id="add-post-type-page">
             <h4 class=" handle">
-                FQA 3          
+                FAQ 3          
                        <span id="arrow" class="arrow-down"></span>  
             </h4>  
             <div class="accordion-section-content" style="display: none;">
