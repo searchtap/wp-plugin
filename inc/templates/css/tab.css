@@ -927,7 +927,7 @@ body .ui-tooltip {
 .handle{
     cursor: pointer; 
 }
- 
+
 .arrow-up {
     width: 0; 
     height: 0; 
@@ -935,6 +935,7 @@ body .ui-tooltip {
     border-right: 5px solid transparent;
     border-bottom: 5px solid black;
 }
+
 .arrow-down {
     width: 0; 
     height: 0; 
@@ -943,10 +944,11 @@ body .ui-tooltip {
     border-top: 5px solid black;
 }
 
-span{
+#arrow{
     float: right;
     margin: 7px;
 }
+
 
 .accordion-section-content{
     display: none;
