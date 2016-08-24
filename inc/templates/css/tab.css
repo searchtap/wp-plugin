@@ -924,25 +924,28 @@ body .ui-tooltip {
     border-color: #a0a5aa transparent;
 }
 
-.handle:after{
-    float: right;
-    content: "\f140" !important;
-    font: 400 20px/1 dashicons;
-    display: block;
-    text-align: center;
-    position: relative!important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-decoration: none!important;
+.handle{
+    cursor: pointer;
 }
 
-.handle:after{
-    /*cursor: pointer;*/
-    content: "\f142";
-/*    position: absolute;
-    top: 12px;
-    right: 10px;*/
-    z-index: 1;
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black;
+}
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+}
+
+span{
+    float: right;
+    margin: 7px;
 }
 
 .accordion-section-content{

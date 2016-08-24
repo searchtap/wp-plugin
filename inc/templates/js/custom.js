@@ -1,10 +1,18 @@
 jQuery(document).ready(function ($) {
+    var style = '\f142';
     jQuery(function () {
         jQuery("#tabs").tabs();
         jQuery('.handle').click(function () {
             jQuery(this).next('.accordion-section-content').slideToggle();
-//            var str = "";
-//            document.styleSheets[0].addRule('h4.handle', 'content: "' + str + '";');
+            var arrow = jQuery(this).find('span');
+            if (arrow.hasClass("arrow-down")) {
+                arrow.removeClass("arrow-down");
+                arrow.addClass("arrow-up");
+            } else if (arrow.hasClass("arrow-up")) {
+                arrow.removeClass("arrow-up");
+                arrow.addClass("arrow-down");
+            }
+
         })
     });
 
