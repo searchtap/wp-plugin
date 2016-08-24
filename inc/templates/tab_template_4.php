@@ -23,7 +23,7 @@ ob_start();
         <li class="control-section accordion-section  add-post-type-page open" id="add-post-type-page">
             <h4 class=" handle" >
                 FQA 2              
-                <span class="arrow-down"></span>  
+                      <span id="arrow" class="arrow-down"></span>  
             </h4>  
             <div class="accordion-section-content " style="display: none;">
                 <div class="inside">
@@ -36,7 +36,7 @@ ob_start();
         <li class="control-section accordion-section  add-post-type-page open" id="add-post-type-page">
             <h4 class=" handle">
                 FQA 3          
-                <span class="arrow-down"></span>  
+                       <span id="arrow" class="arrow-down"></span>  
             </h4>  
             <div class="accordion-section-content" style="display: none;">
                 <div class="inside">
