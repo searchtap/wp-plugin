@@ -43,7 +43,7 @@
 }
 
 body{
-
+    background-color: #f1f1f1 !important;
     line-height: 1.4em;
     font-family: "Open Sans",sans-serif !important;
 }
@@ -880,7 +880,6 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
     float: left;
-    padding: .5em 1em;
     text-decoration: none;
 }
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
@@ -930,8 +929,6 @@ body .ui-tooltip {
 }
 
 .ui-widget-content {
-    /*border: 1px solid #dddddd;*/
-    /*background: #ffffff;*/
     color: #333333;
 }
 .ui-widget-content a {
@@ -1031,9 +1028,9 @@ a:visited.ui-button,
 
 
 
-.ui-visual-focus {
+/*.ui-visual-focus {
     box-shadow: 0 0 3px 1px rgb(94, 158, 214);
-}
+}*/
 
 
 
@@ -1041,12 +1038,18 @@ a:visited.ui-button,
 .ui-icon-background,
 .ui-state-active .ui-icon-background {
     border: #003eff;
-    background-color: #ffffff;
 }
+
+
+#container{
+    background-color: #F1F1F1;
+    position: relative;
+    top: -50px;
+}
+
 .ui-state-active a,
 .ui-state-active a:link,
 .ui-state-active a:visited {
-    /*color: #ffffff;*/
     text-decoration: none;
 }
 

@@ -20,27 +20,29 @@ class tab_template {
     public function tabs_html() {
         ob_start();
         ?>
-        <h1 id="taps_title">
-            SearchTap
-        </h1>
-        <form name="tabTest" method="post" action="admin-post.php">  
-            <input type="hidden" name="action" value="export_data">
+        <div id="container" >
+            <h1 id="taps_title">
+                SearchTap
+            </h1>
+            <form name="tabTest" method="post" action="admin-post.php">  
+                <input type="hidden" name="action" value="export_data">
 
-            <div id="tabs">
-                <ul>
-                    <?php
-                    foreach ($this->tab_name as $key => $template_name) {
-                        ?>
-                        <li><a  class="nav-tab" href="#tabs-<?php echo $key; ?>"><?php echo $template_name; ?></a></li>
-                <?php } ?>  
-                </ul>
+                <div id="tabs">
+                    <ul>
+                        <?php
+                        foreach ($this->tab_name as $key => $template_name) {
+                            ?>
+                            <li><a  class="nav-tab" href="#tabs-<?php echo $key; ?>"><?php echo $template_name; ?></a></li>
+                        <?php } ?>  
+                    </ul>
                     <?php foreach ($this->tab_name as $key => $template_name) { ?>
-                    <div id="tabs-<?php echo $key; ?>">
-                    <?php include_once ('tab_template_' . $key . '.php'); ?>
-                    </div>
-        <?php } ?>   
-            </div>
-        </form>
+                        <div id="tabs-<?php echo $key; ?>">
+                            <?php include_once ('tab_template_' . $key . '.php'); ?>
+                        </div>
+                    <?php } ?>   
+                </div>
+            </form>
+        </div>
         <?php
         echo ob_get_clean();
     }
