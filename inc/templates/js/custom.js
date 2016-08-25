@@ -11,7 +11,6 @@ jQuery(document).ready(function ($) {
                 jQuery(this).find('span').removeClass("arrow-up");
                 jQuery(this).find('span').addClass("arrow-down");
             }
-
         })
 
 
@@ -42,7 +41,6 @@ jQuery(document).ready(function ($) {
             });
         });
     });
-
 });
 
 
