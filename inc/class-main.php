@@ -56,9 +56,11 @@ class Main {
 
     public function searchtap_custom_admin_notice() {
         ?>
-        <div class="notice notice-success is-dismissible"> 
-            <p><strong>Settings saved.</strong></p>
-        </div>
+        <div id="message" class="updated notice is-dismissible">
+            <p>Settings saved.</p>
+            <button type="button" class="notice-dismiss">
+                <span class="screen-reader-text">Dismiss this notice.</span>
+            </button></div>
 
         <?php
     }

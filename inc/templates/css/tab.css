@@ -29,6 +29,23 @@
     font-size: 100%;
     list-style: none;
 }
+
+#taps_title{
+    font-size: 23px; 
+    font-weight: 400;
+    margin-bottom:10px;
+    padding: 9px 18px 12px 3px;
+    line-height: 29px;
+}
+#message{
+    margin-left: 2px;
+
+}
+
+body{
+    font-family: "Open Sans",sans-serif !important;
+}
+
 .form{
     margin-left: 5px;
 }
@@ -906,7 +923,7 @@ body .ui-tooltip {
 }
 
 .ui-widget-content {
-    border: 1px solid #dddddd;
+    /*border: 1px solid #dddddd;*/
     background: #ffffff;
     color: #333333;
 }
