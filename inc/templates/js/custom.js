@@ -40,24 +40,7 @@ jQuery(document).ready(function ($) {
                 }
             });
         });
-
-        jQuery('.updated').css({
-            'opacity': '1',
-            'margin-left': '2px',
-            'margin-bottom':'2px'
-        });
-        
-        jQuery('.updated').before('<h1 id="taps_title"> SearchTap </h1>');
-        
     });
-
-
-//      jQuery('.updated').css('margin-left' , '2px');
-
-//    jQuery('.four').before('<div class="addme">Add Me!</div>');
-
-
-
 });
 
 

@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 class tab_template {
 
     function __construct() {
@@ -21,6 +19,7 @@ class tab_template {
         ob_start();
         ?>
         <div id="wrap" > 
+            <h1 id="taps_title"> SearchTap </h1>
             <form name="tabTest" method="post" action="admin-post.php">  
                 <input type="hidden" name="action" value="export_data">
 
@@ -30,13 +29,13 @@ class tab_template {
                         foreach ($this->tab_name as $key => $template_name) {
                             ?>
                             <li><a  class="nav-tab" href="#tabs-<?php echo $key; ?>"><?php echo $template_name; ?></a></li>
-                        <?php } ?>  
+                    <?php } ?>  
                     </ul>
-                    <?php foreach ($this->tab_name as $key => $template_name) { ?>
+                        <?php foreach ($this->tab_name as $key => $template_name) { ?>
                         <div id="tabs-<?php echo $key; ?>">
-                            <?php include_once ('tab_template_' . $key . '.php'); ?>
+                        <?php include_once ('tab_template_' . $key . '.php'); ?>
                         </div>
-                    <?php } ?>   
+        <?php } ?>   
                 </div>
             </form>
         </div>
