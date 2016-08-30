@@ -19,6 +19,17 @@
     position: absolute;
     width: 1px;
 }
+
+.create_account_section,.log_in_section,.integration_section,.payment_section,.site_setting_section {
+    position: relative;
+    margin-top: 20px;
+    padding: .7em 2em 1em;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    background: #fff;
+
+}
+
 .ui-helper-reset {
     margin: 0;
     padding: 0;
@@ -34,8 +45,10 @@
     font-size: 23px; 
     font-weight: 400;
     margin-bottom:10px;
-    padding: 10px 10px 11px 14px;
+    padding: 0px 10px 11px 0px;
     line-height: 29px;
+    /*    position: relative;
+        top: -25px*/
 }
 #message{
     margin-left: 2px;
@@ -695,6 +708,20 @@ button.ui-button::-moz-focus-inner {
     filter: alpha(opacity=25); /* support: IE8 */
     opacity: 0.25;
 }
+
+.form-table input {
+    width: 25em;
+}
+
+h3{
+    font-size: 1.3em !important;
+    display: block !important;
+    font-weight: 600 !important;
+    color: #23282d !important;
+    margin: 1em 0 !important;
+}
+
+
 .ui-progressbar-indeterminate .ui-progressbar-value {
     background-image: none;
 }
@@ -865,15 +892,19 @@ button.ui-button::-moz-focus-inner {
     padding: .2em;
 }
 .ui-tabs .ui-tabs-nav {
-    margin: 0;
     padding: .2em .2em 0;
+    margin-top: 10px;
+}
+
+.template{
+    margin-left: -18px;
 }
 .ui-tabs .ui-tabs-nav li {
     list-style: none;
     float: left;
     position: relative;
     top: 0;
-    margin: 1px .2em 0 0;
+    margin: 0px 3px 0px 3px;
     border-bottom-width: 0;
     padding: 0;
     white-space: nowrap;
@@ -950,7 +981,14 @@ body .ui-tooltip {
     height: 0; 
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid #23282d;
+    border-top: 5px solid #666666;
+}
+.handle:hover .arrow-up{
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #666666; ;
 }
 
 
@@ -973,7 +1011,7 @@ body .ui-tooltip {
     height: 0; 
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-bottom: 5px solid #23282d; ;
+    border-bottom: 5px solid #a0a5aa; ;
 }
 
 .arrow-down {
@@ -1025,7 +1063,9 @@ a:visited.ui-button,
     text-decoration: none;
 }
 
-
+.nav-tab{
+    margin: 0px;
+} 
 
 
 /*.ui-visual-focus {
@@ -1043,8 +1083,8 @@ a:visited.ui-button,
 
 #container{
     background-color: #F1F1F1;
-    position: relative;
-    top: -50px;
+    /*    position: relative;
+        top: -50px;*/
 }
 
 .ui-state-active a,

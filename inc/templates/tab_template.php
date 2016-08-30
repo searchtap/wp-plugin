@@ -20,10 +20,7 @@ class tab_template {
     public function tabs_html() {
         ob_start();
         ?>
-        <div id="container" >
-            <h1 id="taps_title">
-                SearchTap
-            </h1>
+        <div id="wrap" > 
             <form name="tabTest" method="post" action="admin-post.php">  
                 <input type="hidden" name="action" value="export_data">
 
