@@ -1,17 +1,19 @@
 jQuery(document).ready(function ($) {
     jQuery(function () {
         jQuery("#tabs").tabs();
-        jQuery('.handle').click(function () {
-            jQuery(this).next('.accordion-section-content').slideToggle();
-            var arrow = jQuery(this).find('span');
-            if (arrow.hasClass("arrow-down")) {
-                jQuery(this).find('span').removeClass("arrow-down");
-                jQuery(this).find('span').addClass("arrow-up");
-            } else if (jQuery(this).find('span').hasClass("arrow-up")) {
-                jQuery(this).find('span').removeClass("arrow-up");
-                jQuery(this).find('span').addClass("arrow-down");
-            }
-        })
+            jQuery('.handle').click(function () {
+                jQuery('.accordion-section-content').slideUp();
+                jQuery(this).next('.accordion-section-content').slideToggle();
+                
+                var arrow = jQuery(this).find('span');
+                if (arrow.hasClass("arrow-down")) {
+                    jQuery(this).find('span').removeClass("arrow-down");
+                    jQuery(this).find('span').addClass("arrow-up");
+                } else if (jQuery(this).find('span').hasClass("arrow-up")) {
+                    jQuery(this).find('span').removeClass("arrow-up");
+                    jQuery(this).find('span').addClass("arrow-down");
+                }
+            });
 
 
 //FOR ERMANING THE SAME TAB OPEN AFTER RELOAD
