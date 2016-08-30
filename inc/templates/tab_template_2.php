@@ -64,7 +64,7 @@ ob_start();
         <label for="DataIgnoreSelector">Body</label>
         <input type="text" name="template_two_body" value="<?php echo get_option('template_two_body'); ?>" class="form-control" id="DataIgnoreSelector" placeholder="Body">
     </div>
-    <button type="submit" class="btn btn-primary vert-offset-bottom-5">Save Settings</button>
+    <input type="submit" name="save_menu" id="save_menu_header" class="button button-primary menu-save" value="Save Settings">
 </form>
 
 
