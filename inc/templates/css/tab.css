@@ -482,10 +482,15 @@ button.ui-button::-moz-focus-inner {
 .ui-datepicker-rtl {
     direction: rtl;
 }
-
+#handle:hover {
+    /*color: #23282d;*/
+    background: #f5f5f5;
+}
 #FAQ{
     border: 1px solid #e5e5e5;
     background: #ffffff;
+    border-bottom: 0px;
+    border-top: 0px;
 }
 .ui-datepicker-rtl .ui-datepicker-prev {
     right: 2px;
@@ -898,6 +903,7 @@ h3{
 
 .template{
     margin-left: -18px;
+    margin-top: 20px;
 }
 .ui-tabs .ui-tabs-nav li {
     list-style: none;
@@ -992,9 +998,14 @@ body .ui-tooltip {
 }
 
 
-#side-sortables ul li:hover {
+#FAQ ul li:hover {
     /*color: #23282d;*/
     background: #f5f5f5;
+}
+#FAQ ul li {
+    border-bottom: 1px solid #dfdfdf;
+    margin: 0;
+    border-top: 1px solid #dfdfdf; 
 }
 
 
@@ -1004,6 +1015,7 @@ body .ui-tooltip {
     font-size: 14px;
     display: block;
     font-weight: 600;
+    margin: 9px;
 }
 
 .arrow-up {

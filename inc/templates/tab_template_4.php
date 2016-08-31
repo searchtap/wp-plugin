@@ -5,10 +5,7 @@ if (!defined('ABSPATH')) {
 ob_start();
 ?>
 
-
-<div class="template">
-<div id="FAQ">
-    <div id="side-sortables" class="accordion-container">
+    <div id="FAQ" class="template">
         <ul class="outer-border">
             <li class="control-section accordion-section  add-post-type-page open" id="add-post-type-page">
                 <h4 class="handle">
@@ -51,6 +48,3 @@ ob_start();
             </li>
         </ul>
     </div>
-</div>
-</div>
-
